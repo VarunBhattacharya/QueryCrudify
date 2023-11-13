@@ -18,24 +18,26 @@ body
 
 
 
+/* MIDDLE SEGMENT STYLING */
+.tableStyling
+{
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.thStyling
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: #97d6ec;
+    font-size: 20px;
+}
 
 
 

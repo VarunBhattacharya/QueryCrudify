@@ -15,7 +15,48 @@
         <!-- TOP HEADING TITLE -->
         <h1 class = "topTitle">Query Crudify</h1>
 
-        
+
+        <!-- TABLE -->
+        <table class = "tableStyling" border="1" cellpadding = "10px">
+            <tr>
+                <th class = "thStyling">UniqueID</th>
+                <th class = "thStyling">Name</th>
+                <th class = "thStyling">Age</th>
+                <th class = "thStyling">Email</th>
+                <th class = "thStyling">Edit</th>
+                <th class = "thStyling">Delete</th>
+            </tr>
+            {% for i in basicTable %}
+                <tr>
+                    <td>{{i.unique_id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.email}}</td>
+                    <td><i class="fab fa-envira" name = "Edit"></i></td>
+                    <td><i class="fab fa-mendeley" name = "Delete"></i></td>
+                </tr>
+            {% endfor %}
+
+
+
+            <!-- <tr>
+                <td>1</td>
+                <td>Nick Colson</td>
+                <td>21</td>
+                <td>nick.colson@google.com</td>
+                <td><i class="fab fa-envira" name = "Edit"></i></td>
+                <td><i class="fab fa-mendeley" name = "Delete"></i></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mike Tyson</td>
+                <td>25</td>
+                <td>mike.tyson@google.com</td>
+                <td><i class="fab fa-envira" name = "Edit"></i></td>
+                <td><i class="fab fa-mendeley" name = "Delete"></i></td>
+            </tr> -->
+        </table>
+
 
         <!-- FOOTER -->
         <div class = "footer">
