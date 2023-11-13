@@ -1,0 +1,12 @@
+1.) Create the folder QueryCrudify
+2.) Create the virtual environment --> py -m venv .venv
+3.) Activate the virtual environment --> .venv\Scripts\activate
+4.) Install Django --> pip install django
+5.) Create the project --> django-admin startproject app
+6.) Create the app --> python manage.py startapp crudOp
+7.) Go to app/app and create views.py
+8.) Create app/templates directory for all the html files
+9.) Go to app/settings.py and in TEMPLATES dictionary, inside DIRS array, write [BASE_DIR, "templates"]
+10.) Go to app/app/views.py and create the function for calling index.html
+11.) Go to app/app/urls.py and create the path for index.html by importing views in it.
+12.) Run app/manage.py and check if the page is being loaded or not.
