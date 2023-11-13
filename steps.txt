@@ -8,5 +8,7 @@
 8.) Create app/templates directory for all the html files
 9.) Go to app/settings.py and in TEMPLATES dictionary, inside DIRS array, write [BASE_DIR, "templates"]
 10.) Go to app/app/views.py and create the function for calling index.html
-11.) Go to app/app/urls.py and create the path for index.html by importing views in it.
-12.) Run app/manage.py and check if the page is being loaded or not.
+11.) Go to app/app/urls.py and create the path for index.html by importing views in it
+12.) Run app/manage.py and check if the page is being loaded or not
+13.) Create app/static files for css, images and others
+14.) Add the static files in app/settings.py --> STATICFILES_DIRS = [BASE_DIR, "static"]
