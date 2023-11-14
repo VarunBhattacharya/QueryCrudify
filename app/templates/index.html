@@ -16,46 +16,95 @@
         <h1 class = "topTitle">Query Crudify</h1>
 
 
-        <!-- TABLE -->
-        <table class = "tableStyling" border="1" cellpadding = "10px">
-            <tr>
-                <th class = "thStyling">UniqueID</th>
-                <th class = "thStyling">Name</th>
-                <th class = "thStyling">Age</th>
-                <th class = "thStyling">Email</th>
-                <th class = "thStyling">Edit</th>
-                <th class = "thStyling">Delete</th>
-            </tr>
-            {% for i in basicTable %}
+        <!-- DISPLAY TABLE -->
+        <div class = "displayTableDiv">
+            <table class = "tableStyling" border="1" cellpadding = "10px">
                 <tr>
-                    <td>{{i.unique_id}}</td>
-                    <td>{{i.name}}</td>
-                    <td>{{i.age}}</td>
-                    <td>{{i.email}}</td>
+                    <th class = "thStyling">UniqueID</th>
+                    <th class = "thStyling">Name</th>
+                    <th class = "thStyling">Age</th>
+                    <th class = "thStyling">Email</th>
+                    <th class = "thStyling">Edit</th>
+                    <th class = "thStyling">Delete</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Dummy Person 0</td>
+                    <td>0</td>
+                    <td>dummy.person@gmail.com</td>
                     <td><i class="fab fa-envira" name = "Edit"></i></td>
                     <td><i class="fab fa-mendeley" name = "Delete"></i></td>
                 </tr>
-            {% endfor %}
+                {% for i in basicTable %}
+                    <tr>
+                        <td>{{i.unique_id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.age}}</td>
+                        <td>{{i.email}}</td>
+                        <td><i class="fab fa-envira" name = "Edit"></i></td>
+                        <td><i class="fab fa-mendeley" name = "Delete"></i></td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <!-- ADD Button -->
+            <div class = "positionAddButton">
+                <button name = "addButton" class = "addButtonMainClass addButton" onclick = "addButtonFunction()">
+                    Add Values to Database
+                </button>
+            </div>
+
+        </div>
 
 
 
-            <!-- <tr>
-                <td>1</td>
-                <td>Nick Colson</td>
-                <td>21</td>
-                <td>nick.colson@google.com</td>
-                <td><i class="fab fa-envira" name = "Edit"></i></td>
-                <td><i class="fab fa-mendeley" name = "Delete"></i></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Mike Tyson</td>
-                <td>25</td>
-                <td>mike.tyson@google.com</td>
-                <td><i class="fab fa-envira" name = "Edit"></i></td>
-                <td><i class="fab fa-mendeley" name = "Delete"></i></td>
-            </tr> -->
-        </table>
+        <!-- ADD FORM -->
+        <div id = "addParamsForm">
+            <h3 align = "center">Add Values to the Database</h3>
+            <form method = "POST">
+                {% csrf_token %}
+                <table class = "addFormTable" border = "1" cellpadding = "10px">
+                    <tr>
+                        <th class = "thStyling">
+                            Parameters
+                        </th>
+                        <th class = "thStyling">
+                            Values
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            <input type = "text" name = "name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Age
+                        </td>
+                        <td>
+                            <input type = "text" name = "age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            <input type = "text" name = "email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan = "2">
+                            <button type = "submit" name = "submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
 
 
         <!-- FOOTER -->
@@ -78,4 +127,5 @@
 
     </body>
 
+    <script src = "{% static 'js/index.js' %}"></script>
 </html>

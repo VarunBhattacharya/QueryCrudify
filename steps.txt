@@ -4,11 +4,18 @@
 4.) Install Django --> pip install django
 5.) Create the project --> django-admin startproject app
 6.) Create the app --> python manage.py startapp crudOp
-7.) Go to app/app and create views.py
-8.) Create app/templates directory for all the html files
-9.) Go to app/settings.py and in TEMPLATES dictionary, inside DIRS array, write [BASE_DIR, "templates"]
-10.) Go to app/app/views.py and create the function for calling index.html
-11.) Go to app/app/urls.py and create the path for index.html by importing views in it
-12.) Run app/manage.py and check if the page is being loaded or not
-13.) Create app/static files for css, images and others
-14.) Add the static files in app/settings.py --> STATICFILES_DIRS = [BASE_DIR, "static"]
+7.) Go to app/app/settings.py and inside INSTALLED_APPS array, write 'crudOp'.
+8.) Go to app/app and create views.py
+9.) Create app/templates directory for all the html files
+10.) Go to app/settings.py and in TEMPLATES dictionary, inside DIRS array, write [BASE_DIR, "templates"]
+11.) Go to app/app/views.py and create the function for calling index.html
+12.) Go to app/app/urls.py and create the path for index.html by importing views in it
+13.) Run app/manage.py and check if the page is being loaded or not
+14.) Create app/static files for css, images and others
+15.) Add the static files in app/settings.py --> STATICFILES_DIRS = [BASE_DIR, "static"]
+16.) Run py manage.py makemigrations and py manage.py migrate before creating a super user.
+17.) Run py manage.py createsuperuser for creating a user for the admin site.
+18.) Go to app/crudOp/models.py to create your models.
+19.) Go to app/crudOp/admin.py to register your models.
+20.) Run py manage.py makemigrations and py manage.py migrate for the changes to take place in the database.
+21.) Go to app/app/views.py and import the model and use it.
