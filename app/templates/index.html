@@ -60,7 +60,7 @@
 
         <!-- ADD FORM -->
         <div id = "addParamsForm">
-            <h3 align = "center">Add Values to the Database</h3>
+            <h3 align = "center">Add Value to Database</h3>
             <form method = "POST">
                 {% csrf_token %}
                 <table class = "addFormTable" border = "1" cellpadding = "10px">
@@ -77,7 +77,7 @@
                             Name
                         </td>
                         <td>
-                            <input type = "text" name = "name">
+                            <input style = "background-color: #adddf0; border: 1px solid #008CBA; border-radius: 5px;" type = "text" name = "name" placeholder = "Name">
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +85,7 @@
                             Age
                         </td>
                         <td>
-                            <input type = "text" name = "age">
+                            <input style = "background-color: #adddf0; border: 1px solid #008CBA; border-radius: 5px;" type = "text" name = "age" placeholder = "Age">
                         </td>
                     </tr>
                     <tr>
@@ -93,12 +93,12 @@
                             Email
                         </td>
                         <td>
-                            <input type = "text" name = "email">
+                            <input style = "background-color: #adddf0; border: 1px solid #008CBA; border-radius: 5px;" type = "text" name = "email" placeholder = "Email-iD">
                         </td>
                     </tr>
                     <tr>
                         <td colspan = "2">
-                            <button type = "submit" name = "submit">Submit</button>
+                            <button type = "submit" name = "submit" class = "submit-button">Add</button>
                         </td>
                     </tr>
                 </table>
